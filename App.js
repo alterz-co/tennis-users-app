@@ -6,7 +6,7 @@ import { reactReduxFirebase, getFirebase } from 'react-redux-firebase';
 import { reduxFirestore, getFirestore } from 'redux-firestore';
 import firebase from './src/config/firebase';
 import rootReducer from './src/redux/reducers/rootReducer';
-import RootNavigator from './src/navigation/RootNavigator.js';
+import AppRootNavigator from './src/navigation/AppRootNavigator.js';
 
 const store = createStore(
   rootReducer,
@@ -21,7 +21,7 @@ export default class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <RootNavigator/>
+        <AppRootNavigator/>
       </Provider>
     );
   }
