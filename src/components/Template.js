@@ -1,5 +1,26 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
+import {
+  Container,
+  Header,
+  Left,
+  Right,
+  Body,
+  Title,
+  Content,
+  Tab,
+  Tabs,
+  Form,
+  Item,
+  Input,
+  Picker,
+  Card,
+  CardItem,
+  Text,
+  Button,
+  Icon,
+  Spinner
+} from 'native-base';
 
 class Template extends Component {
   render(){
