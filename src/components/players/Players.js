@@ -1,23 +1,37 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text } from 'react-native';
+import {
+  Container,
+  Tab,
+  Tabs,
+} from 'native-base';
+import Male from './Male';
+import Female from './Female';
 
 class Players extends Component {
   render(){
     return(
-      <View style={styles.container}>
-        <Text>Players</Text>
-      </View>
+      <Container style={{ paddingTop: 20 }}>
+        <Tabs tabBarUnderlineStyle={{ backgroundColor: 'black' }}>
+          <Tab
+            heading='Male'
+            tabStyle={{ backgroundColor: 'white' }}
+            activeTabStyle={{ backgroundColor: 'white' }}
+            activeTextStyle={{ color: 'black' }}
+          >
+            <Male/>
+          </Tab>
+          <Tab
+            heading='Female'
+            tabStyle={{ backgroundColor: 'white' }}
+            activeTabStyle={{ backgroundColor: 'white' }}
+            activeTextStyle={{ color: 'black' }}
+          >
+            <Female/>
+          </Tab>
+        </Tabs>
+      </Container>
     )
   }
 }
-
-var styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-})
 
 export default Players;
